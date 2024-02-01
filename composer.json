@@ -1,0 +1,50 @@
+{
+    "name": "sazzadbinashique/quick-search",
+    "description": "A Laravel package for quick search functionality",
+    "keywords": ["laravel", "search", "quick-search"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sazzad Bin Ashique",
+            "email": "sazzad.sumon35@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "illuminate/support": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SazzadBinAshique\\QuickSearch\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SazzadBinAshique\\QuickSearch\\QuickSearchServiceProvider"
+            ],
+            "aliases": {
+                "QuickSearch": "SazzadBinAshique\\QuickSearch\\Facades\\QuickSearch"
+            }
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/sazzadbinashique/quick-search"
+        }
+    ]
+
+}
