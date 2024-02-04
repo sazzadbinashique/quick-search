@@ -13,21 +13,18 @@ Install the package via Composer:
 composer require sazzadbinashique/quick-search
 ```
 # Laravel Version Compatibility
-- For Laravel 8.x, use version 1.x of this package.
+- For Laravel 8.x and above.
 
 ## Usage
 
 ### 1. Configuration
 
-After installing the package, run the following command to publish the configuration file:
+After installing the package, run the following command to publish the provider
 
 ```bash
-php artisan vendor:publish --tag=quick-search-config
+php artisan vendor:publish --provider="QuickSearch\QuickSearchServiceProvider"
 ```
-
-This will publish the configuration file to ` config/quick-search.php `. Adjust the configuration according to your needs.
-
-###2. Service Provider and Alias
+### 2. Service Provider and Alias
 
 The service provider and facade alias are automatically registered, but you can also manually add them to your ` config/app.php ` file:
 
@@ -43,7 +40,7 @@ The service provider and facade alias are automatically registered, but you can 
 ```    
 
 
-###3.  Basic Usage
+### 3.  Basic Usage
 
 ```php
 YourModel::search('John', ['name' => 'like', 'age' => 'equals'])
