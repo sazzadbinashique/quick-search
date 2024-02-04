@@ -33,12 +33,12 @@ The service provider and facade alias are automatically registered, but you can 
 
 ```php
 'providers' => [
-    SazzadBinAshique\QuickSearch\QuickSearchServiceProvider::class,
+    QuickSearch\QuickSearchServiceProvider::class,
   
 ],
 
 'aliases' => [
-    'QuickSearch' => SazzadBinAshique\QuickSearch\Facades\QuickSearch::class,
+    'QuickSearch' => QuickSearch\Facades\QuickSearch::class,
 ]
 ```    
 
