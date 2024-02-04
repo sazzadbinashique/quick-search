@@ -1,9 +1,9 @@
 <?php
 
-namespace SazzadBinAshique\QuickSearch;
+namespace QuickSearch;
 
 use Illuminate\Support\ServiceProvider;
-use SazzadBinAshique\QuickSearch\Facades\QuickSearchFacade;
+use QuickSearch\Facades\QuickSearchFacade;
 
 class QuickSearchServiceProvider extends ServiceProvider
 {
@@ -14,7 +14,12 @@ class QuickSearchServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-       
+        // how to Triats publish
+        $this->publishes([
+            __DIR__.'/Traits' => app_path('Traits'),
+        ], 'quick-search');
+
+
     }
 
     /**
@@ -27,10 +32,5 @@ class QuickSearchServiceProvider extends ServiceProvider
         $this->app->bind('quick-search', function ($app) {
             return new QuickSearchFacade();
         });
-    
-        // Automatically apply the package configuration
-        // $this->mergeConfigFrom(__DIR__.'/config/quick-search.php', 'quick-search');
-
-       
     }
 }

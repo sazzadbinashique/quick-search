@@ -1,6 +1,6 @@
 <?php
 
-namespace SazzadBinAshique\QuickSearch\Facades;
+namespace QuickSearch\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

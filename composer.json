@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SazzadBinAshique\\QuickSearch\\": "src/"
+            "QuickSearch\\": "src/"
         }
     },
     "minimum-stability": "stable",
@@ -27,11 +27,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "SazzadBinAshique\\QuickSearch\\QuickSearchServiceProvider"
-            ],
-            "aliases": {
-                "QuickSearch": "SazzadBinAshique\\QuickSearch\\Facades\\QuickSearch"
-            }
+                "QuickSearch\\QuickSearchServiceProvider"
+            ]
         }
     },
     "scripts": {
